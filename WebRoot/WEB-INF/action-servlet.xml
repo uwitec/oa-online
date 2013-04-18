@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 系统配置管理 注入配置 -->
+	<bean name="/system" class="com.fhi.system.action.SystemAction" autowire="byName" singleton="false" />
+	<bean name="/index" class="com.fhi.index.action.IndexAction" autowire="byName" singleton="false"/>
+	<!-- <bean name="/upload" class="com.fhi.framework.utils.UploadAction" autowire="byName" /> -->
+   	<bean name="/user" class="com.fhi.user.action.AddUserAction" autowire="byName" singleton="false"/>
+	<bean name="/permission" class="com.fhi.permission.action.PermissionAction" autowire="byName" singleton="false"/>
+	<bean name="ucondition" class="com.fhi.user.condition.UserCondition" autowire="byName" singleton="false"/>
+	<bean name="pcondition" class="com.fhi.permission.condition.PermissionCondition" autowire="byName" singleton="false"/>
+	<!-- 文档管理模块 -->
+	<bean name="/document" class="com.fhi.information.document.action.DocumentAction" autowire="byName" singleton="false"/>
+	<bean name="documentCondition" class="com.fhi.information.document.condition.DocumentCondition" autowire="byName" singleton="false"/>
+	<!-- 图片管理模块 -->
+	<bean name="/picture" class="com.fhi.information.picture.action.PictureAction" autowire="byName" singleton="false"/>
+	<bean name="pictureCondition" class="com.fhi.information.picture.condition.PictureCondition" autowire="byName" singleton="false"/>
+	<!-- 报价管理模块 -->
+	<bean name="/freight" class="com.fhi.information.freight.action.FreightAction" autowire="byName" singleton="false"/>
+	<bean name="freightCondition" class="com.fhi.information.freight.condition.FreightCondition" autowire="byName" singleton="false"/>
+	<!-- 工作计划管理模块 -->
+	<bean name="/workplan" class="com.fhi.usercenter.worktask.action.UcWorkPlanAction" autowire="byName" singleton="false"/>
+	<bean name="workPlanCondition" class="com.fhi.usercenter.worktask.condition.UcWorkPlanCondition" autowire="byName" singleton="false"/>
+	<!-- 系统信息模块 -->
+	<bean name="/sysmsg" class="com.fhi.system.sysmsg.action.SysMsgAction" autowire="byName" singleton="false"/>
+	<bean name="sysMsgCondition" class="com.fhi.system.sysmsg.condition.SysMsgCondition" autowire="byName" singleton="false"/>
+	<!-- 分类管理模块 -->
+	<bean name="/sysclass" class="com.fhi.system.classification.action.SysClassAction" autowire="byName" singleton="false"/>
+	<!-- 公司内刊模块 -->
+	<bean name="/journal" class="com.fhi.journal.action.JournalAction" autowire="byName" singleton="false"/>
+	<bean name="journalCondition" class="com.fhi.journal.condition.JournalCondition" autowire="byName" singleton="false"/>
+	<!-- company action config -->
+	<bean name="/company" class="com.fhi.company.action.CompanyAction" autowire="byName" singleton="false"/>
+	<!-- company action config -->
+	<bean name="/department" class="com.fhi.department.action.DepartmentAction" autowire="byName" singleton="false"/>
+	<!-- employee action config -->
+	<bean name="/employee" class="com.fhi.employee.action.EmployeeAction" autowire="byName" singleton="false"/>
+	<!-- custom action config -->
+	<bean name="/custom" class="com.fhi.custom.action.CustomAction" autowire="byName" singleton="false"/>
+	<!-- 问卷调查-->
+	<bean name="/questionnaire" class="com.fhi.questionnaire.action.QuestionnaireAction" autowire="byName"/>
+	<bean name="questionnaireCondition" class="com.fhi.questionnaire.condition.QuestionnaireCondition" autowire="byName"/>
+</beans>
