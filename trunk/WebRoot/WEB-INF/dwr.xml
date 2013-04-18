@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "http://getahead.org/dwr//dwr30.dtd">
+<dwr>
+	<allow>
+		<!--异常处理 <convert converter="exception" match="java.lang.Exception"> <param 
+			name="include" value="message" /> </convert> -->
+		<!--用spring工厂来创建 -->
+
+		<!-- 系统配置DWR -->
+		<create creator="spring" javascript="System">
+			<param name="beanName" value="/system" />
+			<include method="getCode" />
+		</create>
+		<!-- 代理系统DWR -->
+		<create creator="spring" javascript="AgentServiceDWR">
+			<param name="beanName" value="agentService" />
+			<include method="setPassWord" />
+		</create>
+		<!-- 文档管理DWR -->
+		<create creator="spring" javascript="DocumentDWR">
+			<param name="beanName" value="documentService" />
+			<include method="hasCode" />
+			<include method="delAll" />
+		</create>
+		<!-- 图片管理DWR -->
+		<create creator="spring" javascript="PictureDWR">
+			<param name="beanName" value="pictureService" />
+			<include method="hasCode" />
+			<include method="delAll" />
+		</create>
+		<!-- 报价管理DWR -->
+		<create creator="spring" javascript="FreightDWR">
+			<param name="beanName" value="freightService" />
+			<include method="hasCode" />
+			<include method="delAll" />
+			<include method="queryFrom" />
+			<include method="queryTo" />
+		</create>
+		<convert converter="bean" match="com.fhi.information.freight.vo.FhiFreight">
+			<!-- 只调用fromCode,fromName,toCode,toName字段 -->
+			<param name="include" value="fromCode,fromName,toCode,toName" />
+		</convert>
+
+		<!-- 工作计划管理DWR -->
+		<create creator="spring" javascript="WorkPlanDWR">
+			<param name="beanName" value="workPlanService" />
+			<include method="hasCode" />
+			<include method="delAll" />
+			<include method="editModeAll" />
+		</create>
+		<!-- 系统信息管理DWR -->
+		<create creator="spring" javascript="SysMsgDWR">
+			<param name="beanName" value="sysMsgService" />
+			<include method="delAll" />
+			<include method="showLoad" />
+			<include method="editRead" />
+			<include method="update" />
+		</create>
+		<convert match="com.fhi.system.sysmsg.vo.SysMsg" converter="bean"></convert>
+		<create creator="spring" javascript="UpLoadDwr">
+			<param name="beanName" value="uploadService" />
+			<include method="deleteFile" />
+			<include method="existsFile" />
+			<include method="getFilesByType" />
+		</create>
+		<create creator="spring" javascript="UserDwr">
+			<!--value是spring配置文件里的id -->
+			<param name="beanName" value="userServiceImple" />
+			<!-- queryShelf()方法可使用 -->
+			<include method="isExist" />
+			<include method="dwrequery" />
+			<include method="delUser" />
+			<include method="isPassWord" />
+		</create>
+		<create creator="spring" javascript="UserWebServiceDwr">
+			<param name="beanName" value="userServiceImple" />
+			<include method="userSession" />
+		</create>
+		<create creator="spring" javascript="PermissionDwr">
+			<param name="beanName" value="permissionImple" />
+			<include method="findPermission" />
+			<include method="getModel" />
+			<include method="getModelByPid" />
+		</create>
+
+		<!-- 分类管理DWR -->
+		<create creator="spring" javascript="ClassDwr">
+			<param name="beanName" value="classService" />
+			<include method="queryParent" />
+			<include method="queryTree" />
+			<include method="queryChild" />
+			<include method="saveClass" />
+		</create>
+		<convert match="com.fhi.system.classification.vo.SysClassification"
+			converter="bean"></convert>
+
+		<!-- company dwr -->
+		<create creator="spring" javascript="CompanyDWR">
+			<param name="beanName" value="companyImpl" />
+			<include method="hasCompany" />
+			<include method="addCompany" />
+			<include method="getCompanies" />
+		</create>
+		<convert match="com.fhi.company.vo.FhiOaCompany" converter="bean"></convert>
+		<!-- department dwr -->
+		<create creator="spring" javascript="DepartmentDWR">
+			<param name="beanName" value="depImpl" />
+			<include method="getDeparts" />
+			<include method="getDeparts1" />
+			<include method="hasDep" />
+		</create>
+		<convert match="com.fhi.department.vo.FhiOaDepartment"
+			converter="bean"></convert>
+		<!-- employee dwr -->
+		<create creator="spring" javascript="EmployeeDWR">
+			<param name="beanName" value="employeeImpl" />
+			<include method="hasEmployee" />
+			<include method="getEmployees" />
+		</create>
+		<convert match="com.fhi.employee.vo.FhiOaEmployeeBasic"
+			converter="bean"></convert>
+
+		<!-- company dwr -->
+		<create creator="spring" javascript="CustomDWR">
+			<param name="beanName" value="customImpl" />
+			<include method="hasCustom" />
+		</create>
+		<!-- 电子期刊 -->
+		<create creator="spring" javascript="JournalDWR">
+			<param name="beanName" value="journalService" />
+			<include method="voteAction" />
+		</create>
+		<convert match="com.fhi.journal.vo.FhiJournalVote" converter="bean"></convert>
+		<!-- 港口管理DWR -->
+		<create creator="spring" javascript="PortManageDWR">
+			<param name="beanName" value="portManageService" />
+			<include method="querySelectMenu" />
+			<include method="querySelectLoad" />
+		</create>
+		<convert converter="bean"
+			match="com.fhi.utils.portmanage.vo.FhiOsUtilsPort"></convert>
+
+		<!-- ============DWR分页查询用实体===================== -->
+		<convert match="com.fhi.framework.page.ListTableCourier"
+			converter="bean"></convert>
+		<convert match="com.fhi.framework.page.PageInfo" converter="bean"></convert>
+		<!-- DWR分页查询用实体 -->
+	</allow>
+</dwr>
