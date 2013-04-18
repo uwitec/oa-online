@@ -1,0 +1,59 @@
+@charset "utf-8";
+body{
+margin:0px 0px 0px 0px;
+padding:0px 0px 0px 0px;
+}
+#account_em{
+width:300px ;  
+font-size:12px;
+margin:0px 0px 0px 0px;
+padding:0px 0px 0px 0px;
+}
+#account_em ul{
+  width:300px ;  
+  height:20px;
+}
+#account_em ul li{
+list-style-type:none;
+float:left;
+width:150px ; 
+word-break:break-all;
+}
+#account_em ul li input{
+  width:133px;
+  height:12px;
+}
+
+#account_right{
+margin:0px 0px 0px 0px;
+padding:0px 0px 0px 0px;
+width:300px ; 
+font-size:12px;
+}
+#account_right ul{
+  width:300px ; 
+}
+#account_right ul li{
+list-style-type:none;
+float:left;
+width:95px ; 
+text-align:center;
+word-break:break-all;
+}
+#account_right ul li select{
+  width:95px;
+  height:120px;
+}
+#lroperat{
+   padding-top:60px;
+}
+#operattitle{ 
+width:300px ;  
+height:20px;
+font-size:15px; 
+font-weight:bolder; } 
+#error{ 
+padding-left:10px;
+font-size:10px;  
+color:red;
+}

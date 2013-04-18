@@ -1,0 +1,170 @@
+ 
+#allblock{ 
+  background-color:#ffffff;
+  width:423px; 
+  height:313px;
+}
+#title{
+  color:#004080;
+  font-weight:bolder;
+  font-size:13px;
+  padding:0px 0px 0px 0px;
+}
+ 
+#roundall{
+  width:400px;
+  border:1px solid #F3FAFA; 
+}
+.longer{
+  width:400px; 
+}
+.longer input{
+  width:300px; 
+}
+.shorter{
+  width:20px;
+} 
+#selectedpersons a{
+  font-size:11px;
+  padding:0px 2px 0px 3px;
+}
+#listperson{ 
+  width:304px; 
+  margin:-9px 0px 5px 58px; 
+  background-color:#ffffff;
+  border:1px solid #9595FF;
+  display:none;
+}
+
+.listperson_a {  
+  display:inline-block;
+  width:100%;  
+  font-size:11px;
+  text-decoration: none; 
+  color:#000000;
+  background-color:#ffffff; 
+}
+.listperson_a_select {  
+  display:inline-block;
+  width:100%; 
+  font-size:11px;
+  text-decoration: none; 
+  background-color:#9595FF; 
+  color:#000000;
+}
+
+/*-----------------*/
+#moneyblock{
+  width:375px;
+  height:200px;
+  border:1px solid #F3FAFA;  
+} 
+ 
+#moneyblock ul li input{ 
+  width:100px;  
+}
+#moneyblock ul li select{ 
+  width:100px;   
+}
+.moneyarea{
+  margin-left:25px;
+}
+.moneyarea textarea{
+  margin-left:14px;
+  width:300px;
+  height:70px;
+}
+/*--------------------------------------------*/
+#searchcust{
+  padding:9px 15px 6px 8px;
+  background-color:#f1f1f1; 
+  width:400px; 
+  margin-bottom:8px;
+}
+#searchcust li{   
+  float:left;  
+  margin-left:2px; 
+}  
+
+.cust_name{
+  width:160px; 
+}
+.cust_name input{
+  width:100px;
+}
+.cust_code{
+  width:150px;  
+}
+.cust_code input{
+  width:70px;
+}
+
+.cust_phone{
+  width:120px; 
+}
+.cust_phone input{
+  width:70px;
+}
+.button_test{ 
+	width:85px; 
+}
+.button_test input{
+  background-color:#f1f1f1;
+	background:url(../../images/button_img.png) no-repeat; 
+	width:85px;
+	height:25px;
+	border:none;
+	color:#FFFFFF; 
+	cursor:hand;
+	position:relative;
+	top:-3px;
+}
+#cust_content{   
+	width:421px;
+}
+#cust_content ul li{ 
+   float:left; 
+}
+#cust_title{  
+  color:#ffffff;
+  width:423px; 
+}
+#cust_title li{
+  height:15px; 
+  text-align:center;
+  padding-top:3px;
+  background-color:#636363; 
+}
+.title_custname{ 
+  width:199px;
+   margin-right:1px;
+}
+.title_custcode{
+  width:110px; 
+   margin-right:1px;
+}
+.title_custphone{
+  width:112px; 
+}
+
+#cust_one{   
+  width:424px; 
+  height:20px;  
+  margin:0px; 
+}
+#cust_one:hover{   
+  cursor:hand;
+  background-color:#f1f1f1;
+}
+#cust_one li{ 
+  text-align:left;  
+  font-size:13px;
+} 
+#message{
+  color:red ;
+  font-size:12px;
+  padding:1px 1px 0px 10px ;
+}
+
+
+ 
