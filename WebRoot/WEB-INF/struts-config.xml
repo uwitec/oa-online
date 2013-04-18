@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<!-- 数据源 -->
+	<data-sources></data-sources>
+
+	<!-- 表单 Bean -->
+	<form-beans>
+		<form-bean name="SystemForm" type="com.fhi.system.form.SystemForm" />
+		<form-bean name="AddUserForm" type="com.fhi.user.form.AddUserForm" />
+		<form-bean name="IndxForm" type="com.fhi.index.form.IndexForm" />
+		<form-bean name="PermissionForm" type="com.fhi.permission.form.PermissionForm" />
+		<form-bean name="DocumentForm"
+			type="com.fhi.information.document.form.DocumentForm" />
+		<form-bean name="PictureForm"
+			type="com.fhi.information.picture.form.PictureForm" />
+		<form-bean name="FreightForm"
+			type="com.fhi.information.freight.form.FreightForm" />
+		<form-bean name="companyForm" type="com.fhi.company.action.CompanyForm" />
+		<form-bean name="departmentForm" type="com.fhi.department.action.DepartmentForm" />
+		<form-bean name="employeeForm" type="com.fhi.employee.action.EmployeeForm" />
+		<form-bean name="SysMsgForm" type="com.fhi.system.sysmsg.form.SysMsgForm" />
+		<form-bean name="UcWorkPlanForm"
+			type="com.fhi.usercenter.worktask.form.UcWorkPlanForm" />
+		<form-bean name="JournalForm" type="com.fhi.journal.form.JournalForm" />
+		<form-bean name="customForm" type="com.fhi.custom.action.CustomForm" />
+		<!-- 问卷调查form -->
+		<form-bean name="questionnareForm"
+			type="com.fhi.questionnaire.form.QuestionnaireForm" />
+	</form-beans>
+	<!-- 全局异常 <global-exceptions> <exception key="errors.message" type="java.lang.Exception" 
+		path="/jsp/errorpage.jsp" scope="request"/> </global-exceptions> -->
+
+	<!-- 全局转发 -->
+	<global-forwards>
+		<forward name="login" path="/index.do?method=logout" redirect="true"></forward>
+		<forward name="message" path="/jsp/index/message.jsp" />
+		<forward name="redirect" path="/jsp/index/redirect.jsp" />
+		<forward name="errorpage" path="/jsp/errorpage.jsp" />
+	</global-forwards>
+
+	<!-- 消息资源 -->
+	<action-mappings>
+		<!-- Action -->
+		<!-- 系统配置管理Action配置 -->
+		<action path="/system"
+			type="org.springframework.web.struts.DelegatingActionProxy" input="/jsp/error/index.jsp"
+			validate="true" name="SystemForm" parameter="method" scope="request">
+			<forward name="index" path="/jsp/system/index.jsp" />
+			<forward name="autoCodeIndex" path="/jsp/system/autoCodeIndex.jsp" />
+			<forward name="autoCodeLoad" path="/jsp/system/autoCodeLoad.jsp" />
+			<forward name="main" path="/system.do?method=index" redirect="true" />
+		</action>
+		<!-- 文件上传 -->
+		<action path="/upload"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="upload" path="/jsp/upload/upload.jsp" />
+		</action>
+		<!-- 页面控制 -->
+		<action path="/index" name="IndxForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="left" path="/jsp/index/left.jsp" />
+			<forward name="head" path="/jsp/index/head.jsp" />
+			<forward name="top" path="/jsp/index/top.jsp" />
+			<forward name="foot" path="/jsp/index/foot.jsp" />
+			<forward name="center" path="/jsp/index/center.jsp" />
+			<forward name="login" path="/jsp/index/index.jsp" />
+			<forward name="index" path="/jsp/index/main.jsp" />
+			<forward name="main" path="/index.do?method=index" redirect="true" />
+		</action>
+		<!-- 用户管理 -->
+		<action path="/user" name="AddUserForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true" input="/jsp/user/addUser.jsp">
+			<forward name="addnew" path="/jsp/user/addUser.jsp" />
+			<forward name="userManager" path="/jsp/user/userManager.jsp" />
+			<forward name="index" path="/user.do?method=query" redirect="true" />
+			<forward name="success" path="/jsp/user/success.jsp" />
+			<forward name="failure" path="/jsp/user/failure.jsp" />
+			<forward name="edit" path="/jsp/user/edit.jsp" />
+			<forward name="changepassword" path="/jsp/user/changepassword.jsp" />
+			<forward name="selectEmployee" path="/jsp/user/selectEmployee.jsp" />
+			<forward name="selectEmployeeEdit" path="/jsp/user/selectEmployeeEdit.jsp" />
+			<forward name="emAddUser" path="/jsp/department/addaccount.jsp" />
+			<forward name="midpage" path="/jsp/department/midpage.jsp" />
+		</action>
+		<!-- 权限管理 -->
+		<action path="/permission" name="PermissionForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="index" path="/jsp/permission/index.jsp" />
+			<forward name="creatRoMo" path="/jsp/permission/creatRoMo.jsp" />
+			<forward name="addRole" path="/jsp/permission/addRole.jsp" />
+			<forward name="mod" path="/jsp/permission/permission.jsp" />
+			<forward name="model" path="/jsp/permission/addModule.jsp" />
+		</action>
+		<!-- customer information action configuration start -->
+		<action path="/customer" name="customerInfoForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="load" path="/jsp/customer/save.jsp" />
+			<forward name="list" path="/jsp/customer/list.jsp" />
+			<forward name="success" path="/customer.do?method=list" />
+			<forward name="selcustmoer" path="/jsp/customer/customOpen.jsp" />
+			<forward name="addcustomer" path="/jsp/customer/addcustomer.jsp" />
+			<forward name="editcustomer" path="/jsp/customer/editcustomer.jsp" />
+		</action>
+		<!-- 文件管理模块 -->
+		<action path="/document" name="DocumentForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="index" path="/jsp/document/index.jsp" />
+			<forward name="load" path="/jsp/document/load.jsp" />
+			<forward name="showLoad" path="/jsp/document/showLoad.jsp" />
+			<forward name="showIndex" path="/jsp/document/showIndex.jsp" />
+			<forward name="main" path="/document.do?method=index"
+				redirect="true" />
+		</action>
+		<!-- 图片管理模块 -->
+		<action path="/picture" name="PictureForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="index" path="/jsp/picture/index.jsp" />
+			<forward name="load" path="/jsp/picture/load.jsp" />
+			<forward name="showIndex" path="/jsp/picture/showIndex.jsp" />
+			<forward name="showLoad" path="/jsp/picture/showLoad.jsp" />
+			<forward name="main" path="/picture.do?method=index"
+				redirect="true" />
+		</action>
+		<!-- 报价管理模块 -->
+		<action path="/freight" name="FreightForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="index" path="/jsp/freight/index.jsp" />
+			<forward name="load" path="/jsp/freight/load.jsp" />
+			<forward name="showQuery" path="/jsp/freight/showQuery.jsp" />
+			<forward name="main" path="/freight.do?method=index"
+				redirect="true" />
+		</action>
+		<!-- 工作计划模块 -->
+		<action path="/workplan" name="UcWorkPlanForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="index" path="/jsp/usercenter/workplan/index.jsp" />
+			<forward name="load" path="/jsp/usercenter/workplan/load.jsp" />
+			<forward name="show" path="/jsp/usercenter/workplan/show.jsp" />
+			<forward name="main" path="/workplan.do?method=index"
+				redirect="true" />
+		</action>
+		<!-- 系统信息模块 -->
+		<action path="/sysmsg" name="SysMsgForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="index" path="/jsp/system/sysmsg/index.jsp" />
+			<forward name="load" path="/jsp/system/sysmsg/load.jsp" />
+			<forward name="main" path="/sysmsg.do?method=index" redirect="true" />
+		</action>
+		<!-- 分类管理模块 -->
+		<action path="/sysclass"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="index" path="/jsp/system/class/index.jsp" />
+			<forward name="main" path="/sysclass.do?method=index"
+				redirect="true" />
+		</action>
+		<!-- 月刊管理模块 -->
+		<action path="/journal" name="JournalForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="true">
+			<forward name="index" path="/jsp/journal/index.jsp" />
+			<forward name="vote" path="/jsp/journal/vote.jsp" />
+			<forward name="main" path="/journal.do?method=index"
+				redirect="true" />
+		</action>
+		<!-- company action config -->
+		<action path="/company" name="companyForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="false">
+			<forward name="list" path="/jsp/company/list.jsp" />
+			<forward name="addcom" path="/jsp/company/add.jsp" />
+			<forward name="updateCom" path="/jsp/company/update.jsp" />
+			<forward name="relist" path="/company.do?method=list"
+				redirect="true" />
+		</action>
+		<!-- department action config -->
+		<action path="/department" name="departmentForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="false">
+			<forward name="list" path="/jsp/department/list.jsp" />
+			<forward name="add" path="/jsp/department/add.jsp" />
+			<forward name="edit" path="/jsp/department/edit.jsp" />
+			<forward name="midpage" path="/jsp/department/midpage.jsp" />
+			<forward name="relist" path="/department.do?method=list"
+				redirect="true" />
+		</action>
+		<action path="/employee" name="employeeForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="false">
+			<forward name="list" path="/jsp/employee/list.jsp" />
+			<forward name="listsel" path="/jsp/employee/listsel.jsp" />
+			<forward name="addbasic" path="/jsp/employee/addinfo_basic.jsp" />
+			<forward name="detail" path="/jsp/employee/pre.jsp" />
+			<forward name="relist" path="/employee.do?method=list"
+				redirect="true" />
+		</action>
+		<!-- custom action config -->
+		<action path="/custom" name="customForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="false">
+			<forward name="list" path="/jsp/custom/list.jsp" />
+			<forward name="addcom" path="/jsp/custom/add.jsp" />
+			<forward name="updateCom" path="/jsp/custom/update.jsp" />
+			<forward name="getcust" path="/jsp/accept/selcustom.jsp" />
+			<forward name="relist" path="/custom.do?method=list"
+				redirect="true" />
+		</action>
+
+		<action path="/questionnaire" name="questionnareForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request" validate="false">
+			<forward name="questionnaire" path="/jsp/questionnaire/questionnaire.jsp" />
+			<forward name="edit" path="/jsp/questionnaire/edit.jsp" />
+			<forward name="editQuestion" path="/jsp/questionnaire/editQuestion.jsp" />
+			<forward name="questionnaireQuestions" path="/jsp/questionnaire/questionnaireQuestions.jsp" />
+			<forward name="questionnaireManagement"
+				path="/jsp/questionnaire/questionnaireManagement.jsp" />
+			<forward name="index" path="/jsp/index/main.jsp" />
+			<forward name="result" path="/jsp/questionnaire/result.jsp" />
+			<forward name="selectQuestionnaire" path="/jsp/questionnaire/selectQuestionnaire.jsp" />
+			<forward name="relist"
+				path="/questionnaire.do?method=questionnaireManagement" redirect="true" />
+		</action>
+	</action-mappings>
+</struts-config>
