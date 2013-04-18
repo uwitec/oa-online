@@ -1,0 +1,462 @@
+@charset "utf-8";
+/*员工列表页  --------------------------------------------------- */
+#extend_content{
+	width:810px;  
+	overflow-x:auto;
+	overflow-y:auto;
+	min-height:303px;
+	padding-top:0px;
+	margin-top:-18px;
+}
+#extend_content .list_title{ margin-bottom:1px;}  
+#extend_content ul{ width:1080px;}
+#extend_content ul li{  
+	float:left;  
+	margin-right:1px;
+	text-align:center;
+}
+#extend_content ul li input{
+	width:15px;
+	height:15px;
+}
+#prea{ color:#000000;} 
+/* 查询样式 */
+#search{
+	border:1px solid #cecece;
+	height:95px;
+	padding:5px 0px 0px 0px;
+	background-color:#f1f1f1;
+}
+#search ul{ width:100%; height:28px;}
+#search ul li{ float:left; width:200px;}
+#search ul li input{ width:110px;}
+#search ul li select{ width:116px;}
+#search ul li span{
+	display:inline-block;
+	width:60px;
+	text-align:right;
+}
+#search ul li button{
+	margin-left:94px;
+	margin-bottom:6px;
+}
+.search_input{ width:80px;}
+
+/*列表宽度*/
+.employee_employeecode{ width:90px;} 
+.employee_employeename{ width:85px;}
+.employee_comparent{ width:200px;}
+.employee_depparent{ width:95px;}
+.employee_employeestate{ width:65px;}
+.employee_createtime{ width:120px;}
+.employee_sigleoperat{ width:120px;}
+#extend_content{ margin-bottom:40px;}
+#extend_content .employee_sigleoperat{ border-right:none;}
+#extend_content .com_list_content .employee_sigleoperat{ text-align:left;}
+/*操作按钮*/
+.employee_sigleoperat a{ margin-left:38px;}
+.employee_sigleoperat .d_box{ margin-left:12px;}
+
+/*员工新建页（P1）  --------------------------------------------------- */
+/*翻页按钮部分*/
+#emtitle{
+	border:1px solid #a6a6a6; 
+	border-bottom:none;
+	width:323px; 
+    background-color:#ffffff; 
+}
+#emtitle li{
+	height:20px;
+	text-align:center;
+	float:left;   
+}
+.before{     
+	width:80px;
+	padding:3px 0px 0px 0px; 
+	background-color:#2a4969; 
+	color:#ffffff; 
+}
+.after{      
+	width:80px;
+	padding:3px 0px 0px 0px; 
+	background-color:#ffffff;
+	color:#000000;   
+}
+#emtitle li img{  
+	width:1px ;  
+	height:30px; 
+}
+/*定义input,select*/
+#eminfo input{ width:140px; height:16px;}
+#eminfo_basic_headright .addressinput{ width:472px; height:16px;}
+.slt_height{ width:147px; height:24px; margin-top:2px;}
+
+/*主要内容区域*/
+#eminfo{
+	width:815px ;
+	min-height:910px;  
+	border:solid 1px #a6a6a6;
+}
+/*蓝色标题区域-1*/
+#eminfo_basic_title{
+	height:25px; 
+	margin-top:8px;
+	text-indent:25px;
+	line-height:28px;
+	background-color:#718699; 
+	color:#ffffff;
+}
+#eminfo_basic_head{
+	background-color:#f1f1f1;  
+	position:relative;
+	float:left;
+	height:240px; 
+	width:145px;
+	margin:10px 0px 10px 25px;
+	text-align:center;
+}
+.tital_pic{
+	text-align:left;
+	padding-left:10px;
+	padding-top:10px;
+}
+#showheadpic{
+	margin-top:15px;
+	width:90px;
+	height:128px;
+}
+#eminfo_basic_head span{
+	display:block;
+	margin:8px 0px 8px 0px; 
+}
+#eminfo_basic_head button{
+	margin-top:17px;
+}
+/* 重要信息部分（照片旁）*/
+#eminfo_basic_headright{
+	position:relative;
+	float:left;
+	height:240px; 
+	width:615px;
+	padding-top:8px;
+	padding-left:10px;
+	margin-top:10px;
+	margin-left:20px;
+}
+#eminfo_basic_headright ul{
+	width:610px;
+	margin:3px;
+	padding-bottom:2px;
+	padding-left:10px;
+}
+#eminfo_basic_headright ul li{
+	width:305px;
+	float:left;   
+}
+#eminfo_basic_headright ul li span{ 
+	display:inline-block;
+	width:70px;
+	text-align:right;
+}
+/* 联系信息填写区域（照片下）*/
+#connect{   
+	width:800px;
+	height:100px;
+	padding-top:15px;
+	padding-bottom:2px;
+}
+#connect ul{ 
+	margin-left:-13px;
+	height:27px;
+	width:800px;
+}
+#connect ul li{
+	list-style-type:none;
+	float:left; 
+}
+#connect ul li span{ 
+	display:inline-block;
+	width:115px;
+	text-align:right;
+}
+/*灰色区域*/
+#oneandcom{   
+	width:796px;
+	height:95px;
+	margin-left:10px;
+	padding-top:15px; 
+	text-indent:20px;
+	background-color:#f1f1f1;  
+}
+#oneandcom ul{ 
+	height:27px;
+	width:794px;
+	margin-left:-8px;
+}
+#oneandcom ul li{ float:left;}
+#oneandcom ul li span{ 
+	display:inline-block;
+	width:80px;
+	text-align:right;
+}
+#oneandcom ul li .font_area{ width:110px;}
+
+/*蓝色标题区域-2*/
+#eminfo_extend_title{
+ 	height:22px; 
+	margin-top:24px;
+	text-indent:15px;
+	line-height:24px;
+	background-color:#718699; 
+	color:#ffffff;
+} 
+#eminfo_extend_title ul li{ float:left; }
+
+#eminfo_extend_title ul li div{ float:right;}
+
+/*扩展信息区域*/
+#extend_driver{
+	width:796px;
+	height:120px;
+	margin-left:10px;
+	padding-top:20px; 
+	text-indent:18px;
+}
+#extend_driver ul{ 
+	height:27px;
+	margin-left:-26px;
+}
+#extend_driver ul li{ float:left;}
+
+#extend_driver ul li span{ 
+	display:inline-block;
+	width:99px;
+	text-align:right;
+}
+#extend_driver ul li .font_area{ width:112px;}
+#extend_driver ul li .font_area02{ width:85px;}
+
+/*附件上传区域*/
+#extend_upload{   
+	width:796px;
+	height:120px;
+	margin-left:10px;
+	padding-top:20px; 
+	text-indent:80px;
+	background-color:#f1f1f1;  
+}
+#extend_upload ul{	
+	height:27px;
+	margin-left:-26px;
+}
+#extend_upload ul li{
+	width:50%;
+	float:left;   
+}
+#extend_upload ul li span{ 
+	text-align:right;
+	display:inline-block;
+}
+/*员工新建页（P2）  --------------------------------------------------- */
+/*提示区域-正确*/
+#message{
+	background-color:#e8f2f8; 
+	border:1px solid #3d7fab;
+	color:#3d7fab;
+	width:815px;
+	height:20px;
+	margin-top:10px;
+	margin-bottom:10px;
+	text-indent:15px;
+	line-height:22px;
+}
+hr{
+	height:1px;
+	width:790px;
+	color:#a6a6a6; 
+	margin-left:-18px;
+	margin-bottom:10px;
+}
+/*教育/工作/家庭公共样式*/
+.eminfo_work{
+	width:815px;
+	height:414px;
+	border:1px solid #a6a6a6; 
+	position:relative;
+}
+
+#eminfo_edu .list_title{ margin-top:8px;}
+.list_title span li{
+	list-style-type:none;
+	float:left;
+	width:115px;  
+	text-align:center;
+}
+#eminfo_edu .take_out_line{ border-right:none;}
+/*列表内容*/
+#work_info{
+	width:805px;
+	background-color:#f1f1f1;
+	height:15px;
+	padding:5px;
+	margin:1px 0px 1px 0px ;
+}
+#work_info li{
+	list-style-type:none;
+	float:left;
+	width:115px;  
+	text-align:center;
+}
+#middle_line{
+	width:750px;
+	margin:30px 30px 10px 30px;
+}
+#work_input ul{
+	width:800px;  
+	height:30px;
+}
+#work_input ul li{
+	list-style-type:none;
+	float:left;
+	width:250px;  
+	text-align:center;
+}
+#work_input ul li span{ 
+    display:inline-block; 
+    width:80px;
+	text-align:right;
+}
+/*员工新建页（P3）  --------------------------------------------------- */
+#eminfo_work .list_title{ margin-top:8px;}
+#eminfo_work .take_out_line{ border-right:none;}
+/*员工新建页（P4）  --------------------------------------------------- */
+#eminfo_family .take_out_line{ border-right:none;}
+#eminfo_family .list_title{ margin-top:8px;}
+
+/* 员工展示页  --------------------------------------------------- */
+.line_location{
+	height:1px;
+	width:100%;
+	color:#c2c2c2; 
+	margin-left:0px;
+	margin-bottom:10px;
+	margin-top:-5px;
+}
+#empreview{
+	width:800px;
+	height:50px;  
+	border:solid 1px #B3BBD5;
+}
+#pre_title{
+	text-align:center;
+	font-size:20px;
+	font-weight:bolder;
+	color:#253485;
+	padding-top:10px;
+}
+#pre_code{
+	text-align:right;
+	font-size:11px; 
+	color:#7C92BA; 
+}
+#emmaininfo{
+	width:800px;
+	min-height:750px;
+	border:solid 1px #B3BBD5; 
+}
+/* 照片area*/
+#pre_head_pic{
+	float:left;
+	width:120px;
+	height:140px; 
+	background-color:#f1f1f1;
+	margin:30px 50px auto 31px;
+}
+#pre_head_pic img{
+	width:100px;
+	height:120px;  
+  	margin:10px 10px 10px 10px;
+}
+/* 重要信息部分（照片旁）*/
+.pre_head_pic_right{
+	width:648px;
+	min-height:170px; 
+	padding-top:8px;
+	margin-top:10px;
+	margin-right:-50px;
+	float:left;
+}
+.pre_head_pic_right ul { width:100%; float:left; margin-bottom:5px;}
+.pre_head_pic_right ul li{ width:215px; float:left;}
+
+.pre_head_pic_right ul li span{
+	margin-right:3px;
+	color:#3163a2;
+	text-align:left;
+	display:inline-block;
+	text-align:right;
+}
+#longaddress1 li{ width:600px; margin-top:10px;}
+#emmessage{
+  margin-bottom:7px;
+}
+/*tital-background*/
+.pretitle{
+	background-color:#f1f1f1;
+	width:800px;
+	height:25px;
+	line-height:27px;
+	text-align:center;
+	margin-bottom:12px;
+	margin-top:20px;
+	color:#253485;
+}
+.listtitle{
+	width:800px;
+	margin-bottom:10px;
+}
+.listtitle li{ 
+	list-style-type:none;
+	float:left;
+	width:130px;
+	text-align:center;
+}
+/*长传附件部分展示*/
+#manypics{
+	width:710px;
+	min-height:1px;
+	margin-bottom:80px;
+	margin-left:25px;
+	margin-top:30px;
+	padding-left:25px;
+}
+#manypics .pic li{
+	float:left;
+	width:100px;
+	border:1px solid #595a59;
+	height:80px;
+	margin:6px;
+}
+#manypics ul li img{
+	width:100px;
+	height:80px;
+}
+#manypics .credentials{
+	margin-left:12px;
+	width:100px;
+	text-align:left;
+}
+#manypics .credentials2{
+	margin-left:12px;
+	width:100px;
+	text-align:left;
+}
+/*按钮退回----右下*/	
+#emmaininfo_area{
+	text-align:right;
+	width:100%;
+	position:absolute;
+	bottom:5px;
+	height:50px;
+}
+#emmaininfo_area button{ margin-right:40px;｝

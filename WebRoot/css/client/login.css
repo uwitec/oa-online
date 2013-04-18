@@ -1,0 +1,38 @@
+@charset "utf-8";
+/*登录页面*  --------------------------------------------------- */
+body{
+	background-color: #c0c0c0;
+}
+#login {
+	width: 635px;
+	height: 276px;
+	margin: 180px auto;
+	background: url(../../images/client/login_client.png) no-repeat;
+	color:#000;
+}
+.fontAA{
+	letter-spacing:6px;
+}
+#login ul li,#login ul li{
+	margin-top: 10px;
+}
+#login ul,#login ul{
+	margin-left: -10px;
+}
+#login form,#login form{
+	margin: 150px auto 0px;
+	width: 320px;
+	position: relative;
+}
+#login_button{
+	width: 97px;
+	height: 35px;
+	border: none;
+	background: url(../../images/login_button.png) no-repeat;
+	position: absolute;
+	top: 22px;
+	right: 5px;
+}
+#login_button :hover{ cursor: pointer;}
+#login .text_input,#login_client .text_input{ width: 150px; height: 15px;}
+#login_button{ cursor:pointer;}

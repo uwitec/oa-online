@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* 首页（我的桌面），信息部分 ------------------------------------------------------------- */
+#inform_home{
+	width:450px;
+	margin-top:10px;
+}
+#inform_home .inform_home_content{
+	width:100%;
+	height:153px;
+	background:#f4f4f4;
+	border:1px solid #cbcbcb;
+	border-top-width:0px;
+}
+#inform_home .inform_home01{margin-bottom:9px;}
+#inform_home .inform_home01 .title_14px{
+	width:100%;
+	background:#fafbfc;
+	border:1px solid #cbcbcb;
+	line-height:24px;
+	padding-top:1px;
+	text-indent:16px;
+	display: block;
+	font-size:14px;
+	position:relative;	
+}
+#inform_home .inform_home01 .title_14px a{
+	color:#000;
+	font-size:12px;
+	position:absolute;
+	right:5px;
+}
+/* 标题字>>更多 ---------------------------------------- */
+#inform_home .inform_home01 span a img{ padding-right:5px;}
+.title_14px{ font-size:14px; line-height:25px; padding-bottom:3px;}
+
+/* 列表 ---------------------------------------- */
+.center{ padding-left:10px;}
+.red{color:#fe0200;}
+.blue{color:#3d7da9;}
+
+/* 列表第一行（项目） ---------------------------------------- */
+.inform_home_content .home_list_title{ 
+	margin-top:1px; 
+	width:100%; 
+	height:22px; 
+	background-color:#e0e4e6;
+}
+.inform_home_content .home_list_title li{
+	float:left; 
+	border-left:1px solid #dadbdc; 
+	border-right:1px solid #f3f5f5; 
+	text-align:center; 
+	line-height:22px; 
+	color:#969696;
+}
+.inform_home_content .spacing{ letter-spacing:13px;}
+
+/* （列表内容） ---------------------------------------- */
+div.box{ margin-top:3px;}
+.home_list9{ width:100%; background-color:#f4f4f4; cursor:pointer; line-height:20px; padding-top:2px; padding-bottom:1px;}
+.home_list9:hover{ background-color:#fff;}
+.home_list9 li{ float:left; line-height:21px;}
+.home_list9 li img{text-indent:5px; line-height:20px; margin-left:1px;}
+
+/* 列表宽度 ---------------------------------------- */
+.left_noborder{ width:25px;}
+.list_trumpet{ width:25px;}
+.home_list_time{ width:115px;}
+.titlehome01{ width:170px;}
+.right_noborder{ width:93px;}
+#inform_home .right_noborder{ border-right:none;}
+.home_list9 .right_noborder{ margin-left:5px;}
+#inform_home .home_list_time{ font-size:12px;}
+.home_list9 .home_list_time{ margin-left:10px;}
+#inform_home .titlehome01{ width:170px; font-size:12px;}
+.box a{color:#000;}

@@ -1,0 +1,19 @@
+@charset "utf-8";
+/*部门管理列表页  --------------------------------------------------- */
+/*列表宽度*/
+.department_selall{ width:20px;}
+.department_comfullname{ width:130px;}
+.department_comaddress{ width:192px;}
+.department_comparent{ width:180px;}
+.department_comhomepage{ width:80px;}
+.department_createtime{ width:100px;}
+.department_sigleoperat{ width:94px;}
+.list_title .department_sigleoperat{ border-right:none;}
+#com_all_delete li{
+	list-style-type: none;
+	float:left;
+	margin:15px 15px 0px 0px;
+}
+/*操作按钮*/
+.department_sigleoperat a{ margin-left:10px;}
+.department_sigleoperat .d_box{ margin-left:12px;}

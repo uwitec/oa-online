@@ -1,0 +1,75 @@
+@charset "utf-8";
+/*标题 ---------------------------------------- */	
+.add_account{
+	margin-left:550px;
+	vertical-align:6px;
+	text-align: left;
+}
+.button_adduser{margin-left:600px;height:50px; margin-top:20px;}
+/*列表 ---------------------------------------- */
+*+html #list_table{  height:340px;}
+
+/*文档管理列表样式*/
+.doc_list img{ margin:4px 7px;}
+/*列表宽度*/
+.list_tab_checkbox{
+	width:25px;}
+.list_tab_userid{
+	width:255px;}
+.list_tab_username{
+	width:376px;}
+.list_tab_operate{
+	width:160px;}
+.list_content_box{ margin-top:4px; margin-bottom:10px;}
+
+/*
+用户搜索
+*/
+
+#search ul{ margin-right:20px; } 
+#search img{ margin:-34px 0px 0px 650px;}
+#search ul li{
+	float:left;
+	line-height:25px;
+}
+.search_input{ width:80px;}
+#search ul li select{ width:80px;}
+
+
+/*复选框 ---------------------------------------- */
+/*H2 ---------------------------------------- */
+.account_title_new{
+	line-height:22px;
+	background:url(../images/add.png) no-repeat left;
+	padding-left:22px;
+	padding-top:5px;
+}
+.account_title02_new{
+	line-height:22px;
+	background:url(../images/new-a.gif) no-repeat left;
+	padding-left:22px;
+	padding-top:5px;
+}
+#trend-account{
+	line-height:normal;
+	padding:5px;
+	padding-left:662px;
+}
+#trend-account span{ vertical-align: 8px;}
+
+/*新建账户部分 ---------------------------------------- */
+#addUser{ display:none;}
+#editForm{ display:none;}
+#new_user_box{ margin:60px 5px; border-top:1px solid #CCCCCC;}
+#new_user_box div{ margin-top:10px;}
+#new_user_box ul{ margin:20px 10px;}
+#new_user_box ul li{ width:600px; margin:5px 10px; line-height:25px;}
+#new_user_box ul li img{ position:relative; left:-32px; cursor:hand;}
+#new_user_box ul span{ width:65px; float:left;}
+#new_user_box ul input{ width:120px; float:left; text-align:left;}
+#new_user_box ul a{ color:#666666; padding-left:10px;}
+/*botton*/
+.td_center a img{ cursor:hand;}
+table select{ width:150px; height:200px;}
+.td_center{ padding:0 20px;}
+.th_left{ text-align:left;}

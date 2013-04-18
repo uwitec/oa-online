@@ -1,0 +1,229 @@
+@charset "utf-8";
+/*全局 ---------------------------------------- */
+#mainpage h2{
+	line-height:25px;
+	background:url(file:../images/add.png) no-repeat left;
+	padding-left:22px;
+	padding-top:5px;
+	margin-top:0;}
+.h_detail{
+	color:#3D6792;
+	padding-left:20px;
+	padding-top:13px;
+	margin:0;
+	font-weight:bold;
+}
+/*导航 ---------------------------------------- */
+#left_nav_bg1{
+	width:150px;
+	height:1050px;
+	margin:10px 10px 10px 10px;
+	background-color:#D7D7D7;
+	float:left;}
+/*当前位置 ---------------------------------------- */	
+#location span{
+	background:url(file:../images/arrow-1.png) no-repeat left;
+	padding-left:14px;
+	margin-left:10px;
+	font-weight:bold;
+}	
+#location .fp{
+	background:none;
+	padding-left:8px;
+	margin:0;}	
+#location a{
+	color:#3D6792;}
+#location a:hover{
+	text-decoration:underline;
+	}
+/*基础信息---------------------------------------- */
+.basic_info_detail{
+	border:1px solid #dadada;
+	width:818px;
+	height:235px;
+	margin-top:2px;
+	margin-bottom:5px;}
+
+.basic_info_detail ul {
+	padding-bottom:5px;
+	height:150px;
+}
+.basic_info_detail ul li{
+	padding:0;
+	text-align: left;
+	width:250px;
+	float:left;
+	height:25px;
+}
+.basic_info_detail ul .title_d{
+	width:100px;
+	height:25px;
+	text-align: right;
+	font-weight:bold;
+	float:left;}
+.info_detailbox{ width:700px; margin-top:5px; margin-left:70px;}	
+/*重要信息  ---------------------------------------- */
+.importance_info{
+	background:#f0f0f0;
+	width:820px;
+	height:142px;
+	margin-bottom:2px;
+	margin-top:5px;}
+.importance_info ul {padding-top:8px;}
+
+.importance_info ul li{
+	padding:0;
+	text-align: left;
+	width:250px;
+	float:left;
+	height:25px;}
+.importance_info ul .title_d{
+	width:100px;
+	height:25px;
+	text-align: right;
+	font-weight:bold;
+	float:left;}
+#fund_info ul li{
+	padding:4px 8px 0 17px;
+	float:left;
+	text-align:right;
+	width:245px;
+	height:20px;}
+#fund_info ul{
+	padding-bottom:5px;
+	height:150px;
+}
+/*款项部分  ---------------------------------------- */
+#fund_info{
+	border:1px solid #dadada;
+	width:818px;
+	min-height:290px;
+	margin-top:4px;
+	margin-bottom:2px;
+	padding-top:2px;}
+#fund_info .info_detailbox{ margin-top:25px; height:210px;}
+div.money{
+	height:120px;
+	padding-top:3px;
+}
+#fund_info ul li{
+	padding:0;
+	text-align: left;
+	width:250px;
+	float:left;
+	height:25px;}
+#fund_info ul .title_d{
+	width:100px;
+	height:25px;
+	text-align: right;
+	font-weight:bold;
+	float:left;}
+div.taxes{
+	height:95px;
+	padding-top:3px;
+}
+/*备注 ---------------------------------------- */
+#remark_box{
+	border-top:1px solid #D7D7D7;
+	position:relative;
+	width:778px;
+	line-height:25px;
+	padding:15px 20px;}
+
+.f_detail .info_detailbox02{ margin-top:25px; height:210px;}
+.remark .info_detailbox02 ul{
+	float:left;}
+#info_detailbox02 ul li{
+	width:250px;
+	height:20px;
+	display: block;
+	text-align:left;
+}
+#info_detailbox02 ul li.title_text{
+	width:150px;
+	font-weight:bold;
+	text-align:right;}
+.remarkfont{ font-weight:bold;}
+/*按钮 ---------------------------------------- */
+#trend03{
+	padding-top:8px;;
+	padding-bottom:4px;
+	margin-left:550px;}
+.button_order_form{
+	position:absolute;
+	right:40px;
+	bottom:-30px;}
+.button_bg{
+	background:url(../images/button_img.png) no-repeat;
+	width:87px;
+	height:30px;
+	border:none;
+	color:#FFFFFF;
+	padding:1px 24px 0px 24px ;
+	cursor:hand;
+	letter-spacing:16px;}
+/*分段还款部分 ---------------------------------------- */
+.give_back{
+	width:820px;
+	height:220px;
+	margin-top:30px;
+	padding-top:2px;
+}
+#list_box03{
+	width:818px;
+	height:197px;
+	padding:5px 0;
+}
+/*操作按钮样式  ---------------------------------------- */
+.center img{
+	padding-left:10px;
+}
+/*分段还款列表样式 --------------------------------------- */
+.list_title_money{
+	width:100%;
+	background-color:#626362;
+	line-height:25px;
+	color:#ffffff;}
+.list_title_money li{
+	float:left;
+	border-right:1px solid #FFFFFF;
+	text-align:center;}
+/*列表宽度 ---------------------------------------- */
+.money_type{
+	width:100px;}
+.money_number{
+	width:100px;}
+.time_input{
+	width:100px;}
+.time_back{
+	width:100px;}
+.remark_title{
+	width:413px;}
+#total{
+	text-align:right;
+	margin-bottom:4px;}
+.doc_manag_list:hover{
+	background-color:#FFFFFF;}
+.creattime{
+  width:80px;
+}
+
+/*当前位置 ---------------------------------------- */	
+#location span{
+	background:url(../images/arrow-1.png) no-repeat left;
+	padding-left:14px;
+	margin-left:10px;
+	font-weight:bold;
+}	
+#location .fp{
+	background:none;
+	padding-left:8px;
+	margin:0;
+}
+	
+#location a{ color:#3D6792;}
+#location a:hover{
+	text-decoration:underline;
+}
+/* button右下/ 一个/ ---------------------------------------- */
+.button_no01{ padding-left:260px;}
