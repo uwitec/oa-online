@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/fhioa?InnoDB=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull</value>
+		</property>
+		<property name="username">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value>123</value>
+		</property>
+	</bean>
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName"> <value>com.mysql.jdbc.Driver</value> </property> 
+		<property name="url"> <value>jdbc:mysql://127.0.0.1:3306/fhioa?InnoDB=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull</value> 
+		</property> <property name="username"> <value>root</value> </property> <property 
+		name="password"> <value>!fhi64423933</value> </property> </bean> -->
+	
+	<!-- 文件上传配置 -->
+	<bean name="/upload" class="com.fhi.framework.upload.UploadAction"
+		autowire="byName" />
+	<bean id="uploadService" class="com.fhi.framework.upload.UploadImple"
+		autowire="byName" />
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<!-- ==================实体配置文件开始 =============== -->
+				<!-- 文件上传实体配置 -->
+				<value>/com/fhi/framework/upload/vo/FhiFile.hbm.xml</value>
+				<!-- 系统配置 -->
+				<value>/com/fhi/system/vo/SysAutoCode.hbm.xml</value>
+				<value>/com/fhi/system/vo/SysConfig.hbm.xml</value>
+				<value>/com/fhi/system/classification/vo/SysClassification.hbm.xml</value>
+				<!-- 文档管理配置 -->
+				<value>/com/fhi/information/document/vo/FhiDocument.hbm.xml</value>
+				<!-- 图片管理配置 -->
+				<value>/com/fhi/information/picture/vo/FhiPicture.hbm.xml</value>
+				<!-- 报价管理配置 -->
+				<value>/com/fhi/information/freight/vo/FhiFreight.hbm.xml</value>
+				<!-- 工作计划配置 -->
+				<value>/com/fhi/usercenter/worktask/vo/FhiUcWorkPlan.hbm.xml</value>
+				<!-- 系统通知配置 -->
+				<value>/com/fhi/system/sysmsg/vo/SysMsg.hbm.xml</value>
+				<value>/com/fhi/system/sysmsg/vo/SysMsgSetup.hbm.xml</value>
+				<!-- 权限及用户 -->
+				<value>/com/fhi/permission/vo/FhiRoleUser.hbm.xml</value>
+				<value>/com/fhi/permission/vo/FhiModule.hbm.xml</value>
+				<value>/com/fhi/permission/vo/FhiRole.hbm.xml</value>
+				<value>/com/fhi/permission/vo/FhiRolePermission.hbm.xml</value>
+				<value>/com/fhi/user/vo/FhiUser.hbm.xml</value>
+				<!-- 公司内刊 -->
+				<value>/com/fhi/journal/vo/FhiJournalVote.hbm.xml</value>
+				<!-- company config -->
+				<value>/com/fhi/company/vo/FhiOaCompany.hbm.xml</value>
+				<!-- department config -->
+				<value>/com/fhi/department/vo/FhiOaDepartment.hbm.xml</value>
+				<!-- employee config -->
+				<value>/com/fhi/employee/vo/FhiOaEmployeeBasic.hbm.xml</value>
+				<value>/com/fhi/employee/vo/FhiOaEmployeeEducation.hbm.xml</value>
+				<value>/com/fhi/employee/vo/FhiOaEmployeeFamily.hbm.xml</value>
+				<value>/com/fhi/employee/vo/FhiOaEmployeeWork.hbm.xml</value>
+				<!-- custom config -->
+				<value>/com/fhi/custom/vo/FhiOaCustom.hbm.xml</value>
+				<!-- 港口管理 -->
+				<value>/com/fhi/utils/portmanage/vo/FhiOsUtilsPort.hbm.xml</value>
+				<!-- 问卷调查 -->
+				<value>/com/fhi/questionnaire/vo/QuestionnaireSetup.hbm.xml</value>
+				<value>/com/fhi/questionnaire/vo/Question.hbm.xml</value>
+				<value>/com/fhi/questionnaire/vo/QuestionAnswer.hbm.xml</value>
+				<value>/com/fhi/questionnaire/vo/QuestionnaireDetail.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.connection.useUnicode">true</prop>
+				<prop key="hibernate.connection.characterEncoding">utf-8</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.jdbc.batch_size">20</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- ============================== TransactionManager =========================== -->
+	<!--事务器里面需要sessionFactory -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- ============================== baseTransactionProxyBean =========================== 
+		事务封装器就是把事务器再封一层里面当然需要事务器了,它的作用是方便为要添加事务的类添加事务 模板： <bean id="别名" parent="baseTransactionProxyBean"> 
+		<property name="target"> 要添加事物的类 </property> </bean> -->
+	<bean id="baseTransactionProxyBean" abstract="true"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED,-Exception</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- ============================== main-dbDao =========================== -->
+
+	<bean id="dbDaoTarget" class="com.fhi.framework.dao.DbDaoImple">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+	<!--为dao添加事务 -->
+	<bean id="dbDao" parent="baseTransactionProxyBean">
+		<property name="target">
+			<ref local="dbDaoTarget" />
+		</property>
+	</bean>
+
+	<!-- <bean id="pageInfo" class="com.fhi.framework.page.PageInfo" autowire="byName"/> 
+		<bean id="hquery" class="com.fhi.framework.page.HQuery" autowire="byName"/> -->
+	<!-- JDBC_DAO配置文件 -->
+	<bean id="jdbcDbDao" class="com.fhi.framework.dao.JdbcDbDaoImple"
+		autowire="byName" />
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
+		autowire="byName" />
+	<bean id="sysMsgService" class="com.fhi.system.sysmsg.service.SysMsgImple"
+		autowire="byName" />
+
+	<!-- ======================Service注入配置开始========================= -->
+
+	<!-- 系统配置管理Service配置 -->
+	<bean id="systemService" class="com.fhi.system.service.SystemImple"
+		autowire="byName" />
+	<bean id="classService" class="com.fhi.system.classification.service.ClassImple"
+		autowire="byName" />
+	<!-- 文档管理Service配置 -->
+	<bean id="documentService" class="com.fhi.information.document.service.DocumentImple"
+		autowire="byName" />
+	<!-- 图片管理Service配置 -->
+	<bean id="pictureService" class="com.fhi.information.picture.service.PictureImple"
+		autowire="byName" />
+	<!-- 报价管理Service配置 -->
+	<bean id="freightService" class="com.fhi.information.freight.service.FreightImple"
+		autowire="byName" />
+	<!-- 用户管理Service配置 -->
+	<bean id="userServiceImple" class="com.fhi.user.service.UserImple"
+		autowire="byName" />
+	<!-- 权限管理Service配置 -->
+	<bean id="permissionImple" class="com.fhi.permission.service.PermissionImple"
+		autowire="byName" />
+	<!-- 工作计划管理Service配置 -->
+	<bean id="workPlanService" class="com.fhi.usercenter.worktask.service.UcWorkPlanImple"
+		autowire="byName" />
+	<!-- 公司内刊Service配置 -->
+	<bean id="journalService" class="com.fhi.journal.service.JournalImple"
+		autowire="byName" />
+	<!-- 公司Service配置 -->
+	<bean id="companyImpl" class="com.fhi.company.service.CompanyImpl"
+		autowire="byName" />
+	<bean id="companyCondition" class="com.fhi.company.condition.CompanyCondition"
+		autowire="byName" />
+	<bean id="companyService" parent="baseTransactionProxyBean">
+		<property name="target">
+			<ref local="companyImpl" />
+		</property>
+	</bean>
+	<!-- 部门Service配置 -->
+	<bean id="depImpl" class="com.fhi.department.service.DepartmentImpl"
+		autowire="byName" />
+	<bean id="depCondition" class="com.fhi.department.condition.DepartmentCondition"
+		autowire="byName" />
+	<bean id="depService" parent="baseTransactionProxyBean">
+		<property name="target">
+			<ref local="depImpl" />
+		</property>
+	</bean>
+	<!-- 员工Service配置 -->
+	<bean id="employeeImpl" class="com.fhi.employee.service.EmployeeImpl"
+		autowire="byName" />
+	<bean id="employeeCondition" class="com.fhi.employee.condition.EmployeeCondition"
+		autowire="byName" />
+	<bean id="employeeService" parent="baseTransactionProxyBean">
+		<property name="target">
+			<ref local="employeeImpl" />
+		</property>
+	</bean>
+	<!-- 客户Service配置 -->
+	<bean id="customImpl" class="com.fhi.custom.service.CustomImpl"
+		autowire="byName" />
+	<bean id="customCondition" class="com.fhi.custom.condition.CustomCondition"
+		autowire="byName" />
+	<bean id="customService" parent="baseTransactionProxyBean">
+		<property name="target">
+			<ref local="customImpl" />
+		</property>
+	</bean>
+	<bean id="portManageService" class="com.fhi.utils.portmanage.service.PortManageImple"
+		autowire="byName" />
+	<bean id="HWorld" class="com.fhi.index.webservice.userWebServiceTest"
+		autowire="byName" />
+	<!--问卷管理 -->
+	<bean id="questionnaireInService" class="com.fhi.questionnaire.service.impl.QuestionnaireImpl"
+		autowire="byName" />
+</beans>
