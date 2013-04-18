@@ -1,0 +1,354 @@
+@charset "utf-8";
+/*相册管理 ---------------------------------------- */
+/* 搜索 */
+#search ul .indent{
+	padding-left:35px;}
+#albums_management_list{
+	margin-top:5px;}
+#albums_management_list ul{
+	float:left;
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	width:130px;
+	height:130px;
+	background-color: #DCDCDC;}
+/*ie6*/				
+*html #search ul .indent button{margin-top:6px;}
+/*ie7*/	
+*+html #search ul li input{margin-top:-2px;}
+*html #albums_management_list ul{
+	float:left;
+	margin-top: 1px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	margin-left: 1px;
+	width:130px;
+	height:130px;
+	background-color: #DCDCDC;}
+
+/*相册列表页*/
+.album_management_bg{
+	width:93px;	
+	height:96px;
+	position: relative;
+	left: 23px;
+	top:-10px;
+	text-align:center;
+	background-image: url(../images/album_bg.gif);
+	background-repeat: no-repeat;
+	}
+.album_management_bg img{
+	max-width:90px;
+	max-height:90px;
+	margin-top: expression(this.height>=90?0:( 90 - this.height ) / 2);}
+html.album_management_bg img{
+	width:expression(this.width>90&&this.width>this.height?90:auto);
+	height:expression(this.height>90?90:auto);}
+.album_management_title{
+	width:93px;
+	position: relative;
+	left: 23px;
+	top:-10px;
+	line-height:25px;}
+.album_management_title a{
+	display: block;
+	width: 88px;
+	height: 20px;
+	float: left;
+	color:#000;
+	}
+.album_management_checkbox{
+	position: relative;
+	clear: both;
+	top:5px;
+	left: 3px;
+}
+.album_management_title button{
+	background:url(../images/delete02.gif) no-repeat left;
+	height: 11px;
+	width: 11px;
+	top:5px;
+	margin-left: 5px;
+	position: absolute;
+	float: left;
+	border:none;
+	cursor:hand;
+}
+/******************图库编辑页样式开始**************************/
+/*分类选择框开始*/
+#show_Class_Box{
+	width:790px;
+	height:148px;
+	margin-bottom:5px;
+}
+.class_select{
+	height:165px;
+	overflow-y:hidden;
+	overflow-x:auto;
+}
+.class_select_box{
+	height:133px;
+	width:expression((this.children.length-1)/2*176+160);
+}
+.class_select_box ul{
+	width:150px;
+	height:133px;
+	overflow-y:scroll;
+	border:1px solid #999999;
+	background-color:#EEEEEE;
+	margin-left:10px;
+	float:left;
+	clear: right;
+}
+.class_select_box ul li{
+	float:left;
+	padding-top:3px;
+	padding-left:10px;
+	padding-bottom:2px;
+	overflow:hidden;
+	width:123px;
+	cursor:hand;
+}
+.class_select_box ul li:hover{
+	background-color:#DDDDDD;
+	color:#000000;}
+.class_select_box span{
+	margin-top:60px;
+	margin-left:10px;
+	float:left;
+	width:6px;
+	height:11px;
+	background-image:url(../images/jiantou.png);
+}
+li.onclick{
+	background-color:#748DAF;
+	color:#FFFFFF;
+}
+#com_all_delete02{
+	left:26px;
+}
+
+/*分类选择框结束*/
+
+/*图片模块*/	
+.classify{
+	height:225px;
+	width:790px;
+	border:none;
+	margin-left:14px;
+	position:relative;
+}
+.classify span{
+	margin-left:14px;
+	
+}
+.classify h2{
+	margin-left:12px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.upload_area{
+	height:548px;
+	width:790px;
+	border:none;
+	margin-left:14px;
+	border-top:1px solid #999999
+}
+/*ie6*/
+*html .pic_classify{
+	margin:0px;
+	width:380px;
+	height:600px;
+	float:left;
+}
+/*ie7*/
+*+html .pic_classify{
+	margin:0px;
+	width:383px;;
+	height:600px;
+	float:left;
+}
+/*ie6*/
+*html .pic_input{
+	padding-left:17px;
+	padding-top:18px;
+	line-height:32px;
+}
+/*ie6*/
+*html .pic_input ul li{
+	padding-bottom:8px;
+}
+/*ie7*/
+*+html .pic_input{
+	padding-left:17px;
+	padding-top:15px;
+	line-height:32px;
+}
+
+.document_info_text{
+	width:275px;
+}
+
+/*树-模块*/
+#roleTree{
+	width:350px;
+	height:399px;
+	margin-left:17px;
+	border:1px solid #A1A1A1;
+	overflow:auto;
+}
+/*ie7*/
+*+html #roleTree{
+	width:350px;
+	height:402px;
+	margin-left:17px;
+	border:1px solid #A1A1A1;
+	overflow:auto;
+}
+
+.pic_classify h2{
+	margin-top:38px;
+	margin-left:18px;
+}
+
+/*上传图片模块*/
+.upload_button{
+	background-color:#f3f3f3;
+	border-bottom:1px solid #999999;
+	width:379px;
+	height:38px;
+	padding:10px 10px 0px 0px;
+}
+.upload_button p{
+	margin-left:20px;
+	margin-top:8px;
+	float:left;
+}
+/*ie6*/
+*html .pic_file{
+	margin:0px;
+	width:389px;
+	height:556px;
+	border:1px solid #999999;
+	background-color:#f3f3f3;
+	margin-top:20px;
+}
+/*ie7*/
+*+html .pic_file{
+	margin:0px;
+	width:389px;
+	height:545px;
+	border:1px solid #999999;
+	background-color:#f3f3f3;
+	margin-top:20px;
+}
+.pic_file h2{
+	margin:17px auto 7px 20px;
+	float:left;
+}
+
+/*新建分类按钮*/
+.addbutton_box{
+}
+/*图片上传成功*/
+.pic_show{
+	border:1px solid #999999;
+	background-color:#FFFFFF;
+	width:90px;
+	height:68px;
+	margin-top:2px;
+	margin-left:12px;
+	text-align:center;
+}
+.pic_show img{
+	max-width:90px;
+	max-height:68px;
+	margin-top: expression(this.height>=68?0:( 68 - this.height ) / 2);
+}
+html.pic_show img{
+	width:expression(this.width>90&&this.width>this.height?90:auto);
+	height:expression(this.height>68?68:auto);}
+
+/*图片上传中*/
+.pic_uploading{
+	border:1px solid #999999;
+	background-color:#ffffff;
+	width:90px;
+	height:68px;
+	margin-top:2px;
+	margin-left:13px;
+}
+.pic_uploading span{
+	background:url(../images/001.gif) no-repeat;
+	height:32px;
+	width:38px;
+	margin-top:16px;
+	margin-left:8px;
+	padding-left:33px;
+	padding-top:10px;
+	float:left;
+	font-weight: bold;
+}
+/*图片展示列表*/
+.pic_show_list{	
+	position:absolute;
+	overflow:auto;
+	height:495px;
+	width:390px;
+}
+.pic_show_list li{
+	background-color:#e0e0e0;
+	margin:9px auto 0 8px;
+	width:115px;
+	height:115px;
+	float:left;
+}
+.pic_show_list li a{
+	position:relative;
+	display: block;
+	height:12px;
+	width:84px;
+	color:#000;
+	top:-5px;
+	float: left;
+	margin-left:6px;
+	margin-right:5px;
+	margin-top:9px;
+}
+.pic_show_list button{
+	display: block;
+	height: 12px;
+	width: 11px;
+	margin-top:3px;
+	font-size: 10px;
+	line-height: 6px;
+	border: 1px solid #000000;	
+	cursor:hand;	
+}
+/*尚未传送图片*/
+.pic_no_show{
+	border:1px solid #999999;
+	width:90px;
+	height:68px;
+	margin-top:2px;
+	margin-left:12px;
+}
+/******************图库编辑页样式结束**************************/
+.info{
+	border:1px solid #A1A1A1;
+	width:818px;
+	height:890px;
+	position:relative;
+	margin-top:6px;
+}
+/*************添加分类样式******************/
+.addClassWin{
+	margin-top:30px;
+	margin-left:10px;
+}
+.addClassWin input{
+	width:100px;
+}

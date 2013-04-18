@@ -1,0 +1,303 @@
+@charset "utf-8";
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Verdana, "宋体";
+	font-size: 12px;
+}
+<!--
+/*==============主框样式=====================*/
+.tab_main {
+	/*padding-right:1px;
+	position:relative;
+	*/
+	position:relative;
+}
+/*==============搜索框样式===开始============*/
+.tab_search_box {
+	border:1px solid #666666;
+	background-color:#eeeeee;
+	position:relative;
+	width:100%;
+	padding:6px 0px 11px 0px;
+}
+.tab_search_box ul {
+	margin:0px 0px 0px 15px;
+	clear: both;
+}
+.tab_search_box li {
+	padding:3px 5px 0px 5px;
+	white-space:nowrap;
+	line-height:25px;
+	height:25px;
+	font-weight: bold;
+	float:left;
+}
+/*==============搜索框input===开始============*/
+.tab_text_input{
+	border:1px solid #b1b1b1;
+	line-height:18px;
+}
+.tab_fun_input{
+	border:1px solid #b1b1b1;
+	background-image:url(../images/looking.png);
+	line-height:18px;
+	cursor:hand;
+	background-repeat: no-repeat;
+	background-position:right;
+	height:18px;
+}
+.tab_date_input{
+	border:1px solid #b1b1b1; 
+	background-image:url(../images/time.png);
+	line-height:18px;
+	cursor:hand;
+	background-repeat: no-repeat;
+	background-position:right;
+	width:105px;
+	height:18px;
+}
+.tab_time_input{
+	border:1px solid #b1b1b1;
+	background-image:url(../images/time.png);
+	line-height:18px;
+	cursor:hand;
+	background-repeat: no-repeat;
+	background-position:right;
+	width:140px;
+	height:18px;
+}
+/*==============搜索框input===结束============*/
+/*搜索按钮*/
+.tab_search_box .selectButton {
+	position:absolute;
+	right:5px;
+	bottom:10px;
+}
+/*==============搜索框样式====结束===========*/
+.tab_inpageinfo{
+	color:#ff4800;
+	background-color:#fee9e9;
+	border:1px solid #fcb2b2;
+	display:none;
+	margin:5px 0px;
+	padding:6px 0px 3px 5px;
+	}
+
+/*==============表格样式====开始===========*/
+.tab_border {
+	width:100%;
+	overflow:auto;
+	height:305px;
+	border:1px solid #999999;
+	margin:4px 0px 0px 0px;
+	text-align: center;
+	
+}
+/*载入中图片*/
+.tab_border_loading{
+	background-image: url(../images/001.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.tab_table {
+	width:100%;
+	table-layout:fixed;
+	overflow:auto;
+	background:#FFFFFF;
+}
+.tab_table thead {
+	background-color: #666666;
+	color: #FFFFFF;
+}
+.tab_table thead th {
+	padding:5px 10px;
+}
+.tab_table tbody tr.menuSelected{
+	background-color:#bbbbdd;
+}
+.tab_table tbody tr.even{
+	background-color:#eeeeee;
+}
+.tab_table tbody tr:hover {
+	background-color:#d2d2d2;
+}
+.tab_table tbody td {
+	padding:3px 5px 3px 5px;
+	white-space:nowrap;
+	overflow:hidden;
+	height:22px;
+	text-align:center;
+	text-overflow:ellipsis;
+}
+.tab_table tbody td input {
+	height:14px;
+}
+.width_set {
+	width:0px;
+	height:100%;
+	padding:0px;
+	border-left:1px solid #8d8d8d;
+	border-right:1px solid #383838;
+	display: block;
+}
+.width_set:hover {
+	background-color:#333333;
+}
+/* =====================表格按钮样式======================== */
+.tab_top_button_box {
+	margin:4px 0px 0px 0px;
+}
+.tab_button_bg {
+	background:url(../images/button_img.png) no-repeat;
+	width:87px;
+	height:28px;
+	border:none;
+	color:#FFFFFF;
+	line-height:28px;
+	cursor:hand;
+	letter-spacing:16px;
+}
+.tab_button_bg_sp {
+	letter-spacing:0px;
+}
+/*添加按钮*/
+.tab_button_add {
+	background:url(../images/button_add.png) no-repeat;
+	letter-spacing:15px;
+	padding:0px 0px 0px 15px;
+	position:absolute;
+	right:4px;
+}
+
+/*列表中 小按钮基础设置*/
+.mini_button{
+	width:16px;
+	height:20px;
+	border:none;
+	cursor:hand;
+	margin: 0px 5px 0px 0px;
+}
+/*列表中 打印按钮*/
+.mini_button_print{
+	background:url(../images/print.png) no-repeat;
+}
+/*列表中 预览按钮*/
+.mini_button_preview{
+	background:url(../images/preview.png) no-repeat;
+}
+/* =======表格按钮样式====结束============ */
+
+/*==============表格样式===结束===========*/
+
+/*==============表格下面功能块===开始===========*/
+.tab_bottom {
+	/*width:100%;*/
+	height:25px;
+	clear:both;
+	margin:8px 5px;
+}
+.tab_bottom_button_box {
+	letter-spacing:0px;
+	position:absolute;
+	left:0px;
+}
+/*分页样式  --------------------------------------------------- */
+.paging {
+	float:right;
+	margin-right:10px;
+}
+.paging li {
+	float:left;
+	font-size:90%;
+	margin-right:4px;
+}
+.paging li a {
+	border:solid 1px #adadad;
+	/*margin-right:2px;*/
+	text-decoration:none;
+}
+/*上一页、下一页（制灰）----------- */
+.paging .previous_off {
+	background:url(../images/previous_off.png) no-repeat 7px 6px;
+	width:23px;
+	height:22px;
+	border:solid 1px #dedede;
+	display:block;
+	float:left;
+}
+.paging .next_off {
+	background:url(../images/next_off.png) no-repeat 9px 6px;
+	width:23px;
+	height:22px;
+	border:solid 1px #dedede;
+	display:block;
+	float:left;
+}
+/*上一页、下一页（激活状态）----------- */
+.paging .previous {
+	background:url(../images/previous.png) no-repeat 8px 7px;
+	border:solid 0px #adadad;
+	display:block;
+	float:left;
+}
+.paging .next {
+	background:url(../images/next.png) no-repeat 10px 7px;
+	border:solid 0px #adadad;
+	display:block;
+	float:left;
+}
+.paging .next a {
+	width:20px;
+	height:22px;
+	border:0px;
+	border:solid 1px #adadad;
+}
+.paging .previous a {
+	width:20px;
+	height:22px;
+	border:0px;
+	border:solid 1px #adadad;
+}
+.paging .active {
+	background:#284868;
+	color:#FFFFFF;
+	height:24px;
+	min-width:24px;
+	display:block;
+	float:left;
+	padding:0 2px;
+	margin-right:4px;
+	line-height:23px;
+	text-align:center;
+}
+.paging .total {
+	background:#49657a;
+	color:#FFFFFF;
+	height:24px;
+	display:block;
+	float:left;
+	padding:0 8px;
+	margin-left:2px;
+	line-height:25px;
+}
+.paging a:link, .paging a:visited {
+	color:#0e509e;
+	display:block;
+	float:left;
+	min-width:19px;
+	height:22px;
+	text-align:center;
+	line-height:23px;
+	padding:0 2px;
+}
+.paging a:hover {
+	border:solid 1px #0e509e;
+	text-decoration:none;
+}
+#pageGoInput{
+	width:20px;
+}
+/*==============表格下面功===结束===========*/
+/*==============表格下面功能块=结束===========*/
+-->

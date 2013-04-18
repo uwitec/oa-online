@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* 权限管理--------------------------------------------------- */
+h2{	
+	width:100%;
+	height:25px;
+	font-size:12px;
+	background-color:#eee;
+	margin-top:3px;
+	text-indent:15px;
+	line-height:28px;
+	margin-bottom:10px;
+}
+.input_location{ margin:2px 0 5px 15px;}
+.title_weight{
+	background:url(../images/gif_dot.gif) no-repeat 13px 4px;;
+	width:380;
+	min-height:20px;
+	font-size:12px;
+	line-height:17px;
+	font-weight:bold;
+	padding:0px 10px;
+}
+/* 第一层doc,pic --------------------------------------------------- */
+#fhi_doc_pic{
+	width:830px;
+	margin-bottom:10px;
+}
+.list_table {
+	margin:0px 0px 15px 0px;
+	width:95%;
+	height:aout;
+	border:1px solid #999999;
+	padding:0px 0 10px 0px;
+	/*float:left;*/
+	text-indent:15px;
+}
+#left_box{ margin-right:10px;}
+.content_ul{ margin-top:10px;}
+.content_ul ul{ margin-top:3px; margin-bottom:10px;}
+ul .redio_box{
+	float:left;
+	margin-bottom:3px;
+	margin-right:25px;
+}
+/* 第二层报价，公司 --------------------------------------------------- */
+#fhi_freight_company{
+	width:830px;
+	margin-bottom:10px;
+}
+#fhi_freight_company .list_table{
+	width:403px;
+	min-height:240px;
+	border:1px solid #999999;
+	padding:0px 0 10px 0px;
+	float:left;
+	text-indent:15px;
+}
+/* 第三层部门，员工 --------------------------------------------------- */
+#fhi_department_employee{
+	width:830px;
+	margin-bottom:10px;
+}
+#fhi_department_employee .list_table{
+	width:403px;
+	min-height:290px;
+	border:1px solid #999999;
+	padding:0px 0 10px 0px;
+	float:left;
+	text-indent:15px;
+}
+/* 层薄的 --------------------------------------------------- */
+#fhi_box_small{
+	width:830px;
+	margin-bottom:10px;
+}
+#fhi_box_small .list_table{
+	width:403px;
+	min-height:130px;
+	border:1px solid #999999;
+	padding:0px 0 10px 0px;
+	float:left;
+	text-indent:15px;
+}

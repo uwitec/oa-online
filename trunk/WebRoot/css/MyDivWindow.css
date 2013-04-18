@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*弹窗样式 ------------------------------------------------------------------------------------------------------------------- */
+/*弹窗背景*/
+.win_bg {
+	width:100%;
+	height:100%;
+	background:#000;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+/*/----------弹窗边框------------*/
+.win_crust{
+	position:absolute;
+	border:1px solid #66667e;
+	background-color:#fff;
+	padding:1px;
+	float:left;	
+	}
+.win_padding{
+	border:1px solid #a8a9bb;
+	background-color:#66667e;
+	padding:1px;
+}
+.win_internal{
+	background-color:#fff;
+	}
+/*-------------弹窗内容-------------------*/
+.win_title{
+	height:30px;
+	width:100%;
+	background-color:#244464;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	line-height:30px;
+	text-indent:20px;
+	cursor:move;
+	}
+.close_button{
+	background:url(../images/delete.png) no-repeat;
+	height:15px;
+	width:15px;
+	right:15px;
+	top:10px;
+	position:absolute;
+	cursor:hand;
+}
+.win_content{
+	overflow:auto;
+	}
+.win_content_text{
+	text-align:center;
+	padding-top:20px;
+	}
+	
+.win_button_box{
+	height:32px;
+	width:100%;
+	padding-top:8px;
+	text-align:right;
+	background-color:#d7d7d7;
+}
+.win_button_bg{
+	background:url(../images/button_img.png) no-repeat;
+	width:87px;
+	height:28px;
+	border:none;
+	color:#FFFFFF;
+	line-height:28px;
+	cursor:hand;
+	letter-spacing:16px;
+}
+.win_button_bg_sp{
+	background:url(../images/button_img.png) no-repeat;
+	width:87px;
+	height:28px;
+	border:none;
+	color:#FFFFFF;
+	line-height:28px;
+	cursor:hand;
+}

@@ -1,0 +1,166 @@
+@charset "utf-8";
+/*查询 ---------------------------------------- */
+#search ul{
+	float:left;
+	margin:0;
+	padding-left:18px;}	
+#search ul li{
+	float:left;
+	margin:0;
+	padding:0;
+}
+#search .receipt_time{position:relative;}
+#search ul .tital{padding-top:3px;}
+#search .search_button{ margin-top:8px; padding-left:28px;}
+
+/*input ---------------------------------------- */
+#search ul li input{
+	top:2px;
+	position:relative;
+	height:18px;
+	border:1px solid #b1b1b1;}
+.text_time{
+	background-image:url(../images/time.png);	
+	cursor:hand;
+	width:140px;
+	background-repeat: no-repeat;
+	background-position:right;
+}
+/*---------------------------------------- */
+.manag_checkbox{width:30px;}
+.doc_code_work{ width:30px;}
+.money_type{ width:110px;}
+.money_number{ width:112px;}
+.time_input{ width:110px;}
+.time_back{ width:110px;}
+.remark_title{ width:253px;}
+.operate{ width:100px;}
+.operate_work{ width:130px;}
+.doc_name{ width:172px;}
+.people{ width:150px; font-size:11px;}
+.predict_time{ width:70px;}
+.time{ width:80px;}
+
+/*列表宽度 ---------------------------------------- */
+.doc_code{ width:63px; font-size:11px; vertical-align: bottom; color:#999999;}
+
+/*更多按钮-下拉菜单样式 ---------------------------------------- */
+.other_box{
+	width:150px;
+	background-color:#f1f1f1;
+	border:1px solid #8a99a5;
+	top:160px;
+	left:175px;
+	position: absolute;
+	z-index: auto;}
+.other_box ul{ margin:1px;}
+.other_box ul li{ width:148px; height:22px; cursor:hand;}
+.other_box ul li:hover{ background-color:#b7c1cb; width:118px; height:22px;}
+.other_box ul a{ line-height:22px; padding-left:9px; color:#000; vertical-align: bottom;}
+	
+/*新建工作计划 ----------------------------------------------------------------------- */
+#now_program_content ul li input{
+	width:150px;
+	height:18px;
+	border:1px solid #b1b1b1;
+}
+.text_time{
+	background-image:url(../images/time.png);
+	cursor:hand;
+	background-repeat: no-repeat;
+	background-position:right;
+}
+.inpageinfo_f2{ width:250px; height:30px; line-height:31px; margin-left:-6px;}
+
+/*主要内容部分 ---------------------------------------- */
+#all_input_box{ padding-left:15px; width:710px; height:100px; margin-bottom:20px;}
+#all_input_box ul{ margin-top:5px; margin-bottom:10px; float:left;}
+#all_input_box ul .time01{ padding-left:62px;}
+#all_input_box ul .time02{ padding-left:67px; padding-top:5px;}
+
+/*备注 ---------------------------------------- */
+#remark_box{ margin-top:-35px; }
+#remark_box textarea{ width:480px;}
+#remark_box ul{ margin-left:20px;}
+#remark_box ul li{ width:550px; height:110px; margin-top:25px; }
+#all_input_box select{ width:110px;}
+.mustRed{
+	color:#ff0000;
+	height: 0px;
+	width: 0px;
+	overflow: visible;	
+}
+/*工作计划展示 ----------------------------------------------------------------------- */
+#height_show{ min-height:478px;}
+
+/* 通知管理页 ----------------------------------------------------- */
+#search ul li select{ margin-top:3px; width:110px; border-color:#FF0000;}
+.inform_checkbox{
+	width:8px;
+	height:8px;
+	margin-left:-2px;
+}
+.mainpage_list_top{ margin-top:2px;}
+/*列表宽度 ---------------------------------------- */
+.mailer{ width:45px;}
+.baoj{ width:45px;}
+.inform_caption{ width:220px;}
+.inform_time{ width:150px; font-size:11px;}
+.inform_type{ width:150px; font-size:11px;}
+.inform_operate{ width:140px;}
+
+/*图标定位 ---------------------------------------- */
+.mailer_ico{ margin-top:4px; margin-left:-20px;}
+#icoright{ margin-left:-25px;}
+#icoright a{ padding-left:14px;}
+
+/*提醒颜色样式 ---------------------------------------- */
+.red_01{color:#fe0200;}
+.blue_01{color:#3d7da9;}
+.yellow{color:#ff9900;}
+.black{color:#000000;}
+
+/* 工作计划展示页 --------------------------------------------------------------------- */
+#now_program_content .content_headbox{
+	width:100%px;
+	height:30px;
+	background-color:#f1f1f1;
+	border:1px solid #c9c9c9;
+	border-left:none;
+	border-top:none;
+	border-right:none;
+	margin-top:-30px;
+	margin-left:-25px;
+	margin-bottom:30px;
+}
+/*标题部分 ---------------------------------------- */
+#now_program_content a{
+	color:#000000;
+	text-indent:20px;
+	line-height:30px;
+	width:620px;
+	display: block;
+	float:left;
+}
+.time_box01{
+	color:#000000;
+	line-height:30px;
+	width:210px;
+}
+#now_program_content ul{
+	padding-left:50px;
+	padding-top:10px;
+	margin-bottom:-80px;
+}
+#now_program_content ul li{
+	width:100%;
+	padding:0;
+	margin:0;
+}
+.gray02{
+	color:#ff0000;
+	line-height:25px;
+	margin-top:30px;
+}
+.doc_list .a_box{ margin-left:26px;}
+.doc_list .d_box{ margin-left:5px;}
