@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.fhi.permission.vo.FhiModule" table="fhi_oa_module" lazy="false">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="50"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="moduleCode" type="java.lang.String">
+        	<meta attribute="field-description">权限中文名称</meta>
+            <column name="ModuleCode" length="50" />
+        </property>
+        <property name="moduleUrl" type="java.lang.String">
+            <column name="ModuleUrl" length="255" />
+        </property>
+        <property name="moduleName" type="java.lang.String">
+            <column name="ModuleName" length="50" />
+        </property>
+        <property name="moduleType" type="java.lang.String">
+        	<meta attribute="field-description">权限类型</meta>
+            <column name="moduleType" length="50" />
+        </property>
+        <property name="moduleLevel" type="java.lang.String">
+        	<meta attribute="field-description">默认值</meta>
+        	<column name="ModuleLevel" length="50"></column>
+        </property>
+        <property name="pid" type="java.lang.String">
+        	<meta attribute="field-description">关联模块</meta>
+        	<column name="pid" length="50"></column>
+        </property>
+        <property name="isPid" type="java.lang.String">
+        	<meta attribute="field-description">是否有下一级目录</meta>
+        	<column name="isPid" length="50"></column>
+        </property>
+        <property name="priority" type="java.lang.String">
+        	<meta attribute="field-description">目录优先级</meta>
+        	<column name="priority" length="50"></column>
+        </property>
+                
+    </class>
+</hibernate-mapping>

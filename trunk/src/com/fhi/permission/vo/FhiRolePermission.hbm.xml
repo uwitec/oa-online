@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.fhi.permission.vo.FhiRolePermission" table="fhi_oa_role_permission" lazy="false">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="50"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="roleCode" type="java.lang.String">
+            <column name="RoleCode" length="50" />
+        </property>
+        <property name="moduleCode" type="java.lang.String">
+            <column name="ModuleCode" length="50" />
+        </property>
+        <property name="moduleName" type="java.lang.String">
+            <column name="ModuleName" length="255" />
+        </property>
+        <property name="moduleLevel" type="java.lang.String">
+            <column name="ModuleLevel" length="255" />
+        </property>
+        <property name="modulePid" type="java.lang.String">
+            <column name="ModulePid" length="255" />
+        </property>
+        <property name="moduleType" type="java.lang.String">
+            <column name="ModuleType" length="255" />
+        </property>
+        <property name="permissionCode" type="java.lang.String">
+            <column name="PermissionCode" length="255" />
+        </property>
+        
+    </class>
+</hibernate-mapping>
