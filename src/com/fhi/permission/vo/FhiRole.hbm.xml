@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.fhi.permission.vo.FhiRole" table="fhi_oa_role" lazy="false">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="50"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="roleName" type="java.lang.String">
+            <column name="RoleName" length="50" />
+        </property>
+        <property name="roleCode" type="java.lang.String">
+            <column name="RoleCode" length="50" />
+        </property>
+        <property name="pid" type="java.lang.String">
+            <column name="Pid" length="50" />
+        </property>
+         <property name="isPid" type="java.lang.String">
+            <column name="IsPid" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
