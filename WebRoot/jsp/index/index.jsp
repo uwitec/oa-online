@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>华展鑫荣信息共享平台 v1.0</title>
+<title>办公信息共享平台 v1.0</title>
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/new_general.css" />
 </head>
 <script type='text/javascript' id="dwrUrl" src='<%=request.getContextPath() %>/dwr/interface/UserDwr.js'></script>
